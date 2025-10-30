@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Growth & Marketing Outlook 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display:swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Prevent body scroll */
+        }
+        .slide {
+            display: none; /* Hidden by default */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex; /* Show active slide */
+            opacity: 1;
+        }
+        
+        /* For simple bar charts */
+        .bar-chart-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem; /* 8px */
+        }
+        .bar-chart-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem; /* 12px */
+        }
+        .bar-chart-label {
+            flex-shrink: 0;
+            width: 8rem; /* 128px */
+            font-size: 0.875rem; /* 14px */
+            color: #cbd5e1; /* slate-300 */
+            text-align: right;
+        }
+        .bar-chart-bar-bg {
+            flex-grow: 1;
+            height: 1.75rem; /* 28px */
+            background-color: #334155; /* slate-700 */
+            border-radius: 0.375rem; /* 6px */
+            overflow: hidden;
+        }
+        .bar-chart-bar {
+            height: 100%;
+            background-color: #22d3ee; /* cyan-400 */
+            border-radius: 0.375rem; /* 6px */
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.75rem;
+            font-size: 0.875rem; /* 14px */
+            font-weight: 600;
+            color: #083344; /* cyan-950 */
+            min-width: 40px; /* Ensure text is visible even for small % */
+        }
+
+    </style>
+</head>
+<body class="h-full bg-slate-900 text-white flex flex-col items-center justify-center p-4 md:p-8">
+
+    <!-- Main Presentation Container -->
+    <div class="w-full max-w-6xl h-full max-h-[800px] bg-slate-800 rounded-2xl shadow-2xl flex flex-col overflow:hidden">
+        
+        <!-- Header -->
+        <header class="p-4 md:p-6 border-b border-slate-700 flex justify-between items-center">
+            <h1 class="text-lg md:text-xl font-bold text-cyan-400">Franchise Growth & Marketing Outlook 2025</h1>
+            <div class="text-sm font-medium text-slate-400" id="slide-indicator"></div>
+        </header>
+
+        <!-- Slide Viewport -->
+        <main id="slide-container" class="flex-1 relative overflow-hidden p-6 md:p-12">
+            
+            <!-- Slide 1: Title -->
+            <div class="slide active h-full flex-col justify-center items-center text-center p-4">
+                <div class="mb-4 text-cyan-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-4 text-white">Franchise Growth & Marketing Outlook 2025</h1>
+                <p class="text-xl md:text-2xl text-slate-300">Executive Insights for Franchise Frameworks</p>
+                <p class="mt-8 text-slate-400">Use the arrow keys or on-screen buttons to navigate.</p>
+            </div>
+
+            <!-- Slide 2: Landscape -->
+            <div class="slide h-full flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-cyan-400"><path d="M2.5 17a2.4 2.4 0 0 1 0-4.8c.2-2.7 1.8-5 4.1-6.2a6.3 6.3 0 0 1 10.1 2.5 2.3 2.3 0 0 1 4 1.9 2.7 2.7 0 0 1 0 5.4H2.5z"></path></svg>
+                    I. The 2025 Franchise Landscape
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Left Column: Stats -->
+                    <div class="space-y-6">
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <div class="text-6xl font-extrabold text-cyan-400">58%</div>
+                            <p class="text-xl text-slate-200 mt-2">of development teams maintained or expanded growth plans in 2024-2025.</p>
+                        </div>
+                         <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <div class="text-6xl font-extrabold text-cyan-400">90%+</div>
+                            <p class="text-xl text-slate-200 mt-2">of brands are in the early growth phase, creating a vast opportunity.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Chart -->
+                    <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-white mb-4">FRANdata Brand Distribution</h3>
+                        <div class="bar-chart-container space-y-3">
+                            <!-- 36% -->
+                            <div class="bar-chart-item">
+                                <div class="bar-chart-label">1-25 Units</div>
+                                <div class="bar-chart-bar-bg">
+                                    <div class="bar-chart-bar" style="width: 36%;">36%</div>
+                                </div>
+                            </div>
+                            <!-- 25% -->
+                            <div class="bar-chart-item">
+                                <div class="bar-chart-label">Emerging</div>
+                                <div class="bar-chart-bar-bg">
+                                    <div class="bar-chart-bar" style="width: 25%;">25%</div>
+                                </div>
+                            </div>
+                            <!-- 5% -->
+                            <div class="bar-chart-item">
+                                <div class="bar-chart-label">500+ Units</div>
+                                <div class="bar-chart-bar-bg">
+                                    <div class="bar-chart-bar" style="width: 5%;">5%</div>
+                                </div>
+                            </div>
+                            <!-- 34% -->
+                            <div class="bar-chart-item">
+                                <div class="bar-chart-label">Other</div>
+                                <div class="bar-chart-bar-bg">
+                                    <div class="bar-chart-bar" style="width: 34%;">34%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Lead Gen -->
+            <div class="slide h-full flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-cyan-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    II. Franchise Development & Lead Gen
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Left: Chart -->
+                    <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-white mb-4">Dominant Lead Sources</h3>
+                        <div class="bar-chart-container space-y-3">
+                            <div class="bar-chart-item">
+                                <div class="bar-chart-label">Google</div>
+                                <div class="bar-chart-bar-bg">
+                                    <div class="bar-chart-bar" style="width: 87%;">87%</div>
+                                </div>
+                            </div>
+                            <div class="bar-chart-item">
+                                <div class="bar-chart-label">Meta</div>
+                                <div class="bar-chart-bar-bg">
+                                    <div class="bar-chart-bar" style="width: 77%;">77%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-8 mb-4">Fastest Growing</h3>
+                        <div class="flex space-x-4">
+                            <div class="flex-1 bg-slate-600 p-4 rounded-lg text-center">
+                                <div class="text-4xl font-extrabold text-cyan-400">+11%</div>
+                                <p class="text-slate-200 mt-1">Franchise Portals</p>
+                            </div>
+                            <div class="flex-1 bg-slate-600 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-extrabold text-cyan-400">TikTok</div>
+                                <p class="text-slate-200 mt-1">Fastest-Emerging Paid</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Takeaway -->
+                    <div class="bg-cyan-800 p-6 rounded-lg shadow-lg flex flex-col justify-center text-white">
+                        <h3 class="text-2xl font-bold mb-4">The 2025 Winning Playbook</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-cyan-300 flex-shrink-0"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
+                                <p class="text-lg">AI-Optimized Ad Automation</p>
+                            </div>
+                            <div class="text-4xl font-bold text-center text-cyan-600">+</div>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-cyan-300 flex-shrink-0"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <p class="text-lg">Strategic Broker Partnerships</p>
+                            </div>
+                            <div class="text-4xl font-bold text-center text-cyan-600">+</div>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-cyan-300 flex-shrink-0"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                <p class="text-lg">Content-Driven Organic Authority</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Marketing -->
+            <div class="slide h-full flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-cyan-400"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    III. Marketing Transformation
+                </h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                    <!-- Gen AI -->
+                    <div class="bg-slate-700 p-4 md:p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+                        <h3 class="text-lg font-bold text-white">Generative AI</h3>
+                        <p class="text-slate-300 text-sm">Personalization & Ad-Optimization. <span class="font-bold text-cyan-400">Up to 500% lift.</span></p>
+                    </div>
+                    <!-- Voice Search -->
+                    <div class="bg-slate-700 p-4 md:p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                        <h3 class="text-lg font-bold text-white">Voice Search</h3>
+                        <p class="text-slate-300 text-sm">Optimize for conversational queries. <span class="font-bold text-cyan-400">154M US users.</span></p>
+                    </div>
+                    <!-- Video Dominance -->
+                    <div class="bg-slate-700 p-4 md:p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>
+                        <h3 class="text-lg font-bold text-white">Video Dominance</h3>
+                        <p class="text-slate-300 text-sm">Most persuasive medium across YouTube, Reels, & TikTok.</p>
+                    </div>
+                    <!-- Nano-Influencers -->
+                    <div class="bg-slate-700 p-4 md:p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="m21.17 19.83-2.34-2.34a4 4 0 0 0-2.83-1.17H11.5"></path><path d="m21.17 19.83 2.34 2.34a2 2 0 0 1-2.83 2.83l-2.34-2.34"></path></svg>
+                        <h3 class="text-lg font-bold text-white">Nano-Influencer Mktg</h3>
+                        <p class="text-slate-300 text-sm">Local ambassadors outperform celebrities in engagement.</p>
+                    </div>
+                    <!-- E-E-A-T -->
+                    <div class="bg-slate-700 p-4 md:p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path></svg>
+                        <h3 class="text-lg font-bold text-white">Data Privacy & E-E-A-T</h3>
+                        <p class="text-slate-300 text-sm">Trust signals and authoritativeness are critical for ranking.</p>
+                    </div>
+                    <!-- Social Commerce -->
+                    <div class="bg-slate-700 p-4 md:p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+                        <h3 class="text-lg font-bold text-white">Social Commerce</h3>
+                        <p class="text-slate-300 text-sm">Consumers purchasing directly through social apps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Economic -->
+            <div class="slide h-full flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-cyan-400"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    IV. Economic and Structural Forces
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Left: KPIs -->
+                    <div class="space-y-6">
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center">
+                                <span class="text-6xl font-extrabold text-cyan-400">+1.9%</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-4 text-green-400"><path d="M12 2v20"></path><path d="m5 10 7-7 7 7"></path></svg>
+                            </div>
+                            <p class="text-xl text-slate-200 mt-2">Projected rise in Franchise GDP contribution in 2025.</p>
+                        </div>
+                         <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center">
+                                <span class="text-5xl font-extrabold text-cyan-400">Financing</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-4 text-green-400"><path d="M12 2v20"></path><path d="m5 10 7-7 7 7"></path></svg>
+                            </div>
+                            <p class="text-xl text-slate-200 mt-2">Accessibility has improved with higher loan approvals.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Lists -->
+                    <div class="space-y-6">
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-3">Key Expansion Drivers</h3>
+                            <span class="inline-block bg-cyan-600 text-white text-base font-semibold px-4 py-2 rounded-full mb-2">Service Categories</span>
+                            <span class="inline-block bg-cyan-600 text-white text-base font-semibold px-4 py-2 rounded-full mb-2">QSR</span>
+                        </div>
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-3">Franchisor Priorities</h3>
+                             <ul class="text-lg text-slate-200 space-y-2 list-disc list-inside">
+                                <li>Unit economics transparency</li>
+                                <li>Simplified onboarding</li>
+                                <li>Attracting multi-unit operators</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Strategy -->
+            <div class="slide h-full flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-cyan-400"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    V. Strategic Takeaways for Franchise Frameworks
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Spotlight -->
+                    <div class="md:col-span-1 bg-cyan-800 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center text-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">Core Initiative</h3>
+                        <div class="text-8xl font-extrabold text-white">36%</div>
+                        <p class="text-xl text-cyan-200 mt-2">Target the 36% of emerging franchisors (1-25 units) with scalable growth services.</p>
+                    </div>
+
+                    <!-- List of 4 -->
+                    <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-2">Digital & AI Adoption</h3>
+                            <p class="text-slate-300">Deploy AI-powered ad management and content engines for local personalization.</p>
+                        </div>
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-2">Omni-Channel Lead Gen</h3>
+                            <p class="text-slate-300">Integrate Google P-Max, Meta Dynamic Ads, and TikTok DSAs.</p>
+                        </div>
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-2">Voice & Social Search</h3>
+                            <p class="text-slate-300">Develop a "Voice SEO" framework (schema, FAQ) and use social listening.</p>
+                        </div>
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-2">Data, Trust & ROI</h3>
+                            <p class="text-slate-300">Establish transparent KPIs and strengthen E-E-A-T signals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Conclusion -->
+            <div class="slide h-full flex-col justify-center items-center text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-cyan-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    VI. Conclusion
+                </h2>
+                
+                <div class="w-full max-w-4xl">
+                    <h3 class="text-2xl md:text-3xl font-semibold text-slate-200 mb-8">2025's Primary Growth Drivers:</h3>
+                    
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-12">
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400 mx-auto"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+                            <span class="text-2xl font-bold text-white">AI</span>
+                        </div>
+                        <div class="text-4xl font-bold text-cyan-600">+</div>
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg text-center">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400 mx-auto"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2v0Z"></path><path d="M12 12 8 8"></path><path d="m8 12 4 4"></path><path d="m12 8 4 4"></path><path d="m16 12-4 4"></path></svg>
+                            <span class="text-2xl font-bold text-white">Diversification</span>
+                        </div>
+                        <div class="text-4xl font-bold text-cyan-600">+</div>
+                        <div class="bg-slate-700 p-6 rounded-lg shadow-lg text-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3 text-cyan-400 mx-auto"><path d="M7 10v12"></path><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"></path></svg>
+                            <span class="text-2xl font-bold text-white">Authenticity</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-cyan-800 p-8 rounded-lg shadow-2xl">
+                        <p class="text-2xl md:text-3xl font-semibold text-white">Franchise Frameworks is ideally positioned to empower brands to <span class="text-cyan-300">scale smarter</span>, <span class="text-cyan-300">build trust faster</span>, and <span class="text-cyan-300">thrive</span>.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer / Navigation -->
+        <footer class="p-4 md:p-6 border-t border-slate-700 flex justify-end items-center space-x-3">
+            <button id="prev-slide" class="bg-slate-700 hover:bg-cyan-600 text-white font-bold p-3 rounded-full transition-all disabled:opacity-50 disabled:hover:bg-slate-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <button id="next-slide" class="bg-slate-700 hover:bg-cyan-600 text-white font-bold p-3 rounded-full transition-all disabled:opacity-50 disabled:hover:bg-slate-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            const prevButton = document.getElementById('prev-slide');
+            const nextButton = document.getElementById('next-slide');
+            const slideIndicator = document.getElementById('slide-indicator');
+
+            function showSlide(n) {
+                // Remove active class from all
+                slides.forEach(slide => slide.classList.remove('active'));
+
+                // Set current slide index
+                currentSlide = n;
+
+                // Add active class to current slide
+                slides[currentSlide].classList.add('active');
+
+                // Update indicator
+                slideIndicator.textContent = `Slide ${currentSlide + 1} of ${totalSlides}`;
+
+                // Update button states
+                prevButton.disabled = (currentSlide === 0);
+                nextButton.disabled = (currentSlide === totalSlides - 1);
+            }
+
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    showSlide(currentSlide + 1);
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    showSlide(currentSlide - 1);
+                }
+            }
+
+            // Event Listeners
+            prevButton.addEventListener('click', prevSlide);
+            nextButton.addEventListener('click', nextSlide);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            // Initialize
+            showSlide(0);
+        });
+    </script>
+
+</body>
+</html>
+
