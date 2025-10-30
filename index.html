@@ -53,6 +53,8 @@
             flex-grow: 1;
             padding: 2rem 3rem 3rem;
             overflow-y: auto;
+            /* Added 'min-height: 0' to fix flex overflow issue in some browsers */
+            min-height: 0; 
         }
 
         /* --- Chart Styles --- */
@@ -85,7 +87,8 @@
             align-items: center;
             color: white;
             font-weight: 600;
-            clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+            /* UPDATED: Changed clip-path to be wide-top, narrow-bottom */
+            clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
         }
         .funnel-segment + .funnel-segment {
             margin-top: -20px; /* Overlap segments */
@@ -232,6 +235,7 @@
             <!-- Slide 5: Phase 1: Launch & Learning -->
             <div class="slide">
                 <h1 class="slide-title">Phase 1: Launch & Learning <span class="text-2xl text-gray-400 font-light">($2,500/mo)</span></h1>
+                <!-- UPDATED: Reduced padding and text size -->
                 <div class="slide-content grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <!-- Chart -->
                     <div class="flex flex-col items-center bg-gray-700 p-6 rounded-xl">
@@ -250,20 +254,21 @@
                         </div>
                     </div>
                     <!-- Key Actions -->
-                    <div class="space-y-6">
+                    <!-- UPDATED: Reduced space-y-6 to space-y-4 and text-lg to text-base -->
+                    <div class="space-y-4">
                         <h3 class="text-3xl font-semibold text-white mb-4">Key Channels & Focus</h3>
                         <div class="flex items-start gap-4">
                             <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M10 18a8 8 0 0 0 0-16 8 8 0 0 0 0 16Z"></path><path d="m21 21-4.3-4.3"></path></svg></div>
                             <div>
                                 <h4 class="text-2xl font-semibold text-white">Google Search Ads</h4>
-                                <p class="text-lg text-gray-300">Focus on Brand, Generic, and Competitor terms to establish a CPL baseline. (Est. CPL: $100-$125)</p>
+                                <p class="text-base text-gray-300">Focus on Brand, Generic, and Competitor terms to establish a CPL baseline. (Est. CPL: $100-$125)</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div>
                             <div>
                                 <h4 class="text-2xl font-semibold text-white">Meta Ads (FB/IG)</h4>
-                                <p class="text-lg text-gray-300">Test "Owner-Operator" vs. "Semi-Absent" personas with "Escape the 9-5" creatives. (Est. CPL: $60-$100)</p>
+                                <p class="text-base text-gray-300">Test "Owner-Operator" vs. "Semi-Absent" personas with "Escape the 9-5" creatives. (Est. CPL: $60-$100)</p>
                             </div>
                         </div>
                     </div>
@@ -306,6 +311,7 @@
             <!-- Slide 7: Phase 2: Optimization -->
             <div class="slide">
                 <h1 class="slide-title">Phase 2: Optimization <span class="text-2xl text-gray-400 font-light">($3,500/mo)</span></h1>
+                <!-- UPDATED: Reduced padding and text size -->
                 <div class="slide-content grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <!-- Chart -->
                     <div class="flex flex-col items-center bg-gray-700 p-6 rounded-xl">
@@ -328,20 +334,21 @@
                         </div>
                     </div>
                     <!-- Key Actions -->
-                    <div class="space-y-6">
+                    <!-- UPDATED: Reduced space-y-6 to space-y-4 and text-lg to text-base -->
+                    <div class="space-y-4">
                         <h3 class="text-3xl font-semibold text-white mb-4">New Channel Deep Dives</h3>
                         <div class="flex items-start gap-4">
                             <div class="icon-box bg-sky-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
                             <div>
                                 <h4 class="text-2xl font-semibold text-white">LinkedIn Ads ($420/mo)</h4>
-                                <p class="text-lg text-gray-300">Target C-Suite & VPs with "Multi-unit investor" messaging. High-quality, high-CPL leads. (Est. CPL: $140-$180)</p>
+                                <p class="text-base text-gray-300">Target C-Suite & VPs with "Multi-unit investor" messaging. High-quality, high-CPL leads. (Est. CPL: $140-$180)</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="icon-box bg-red-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17Z"></path><path d="m10 15 5-3-5-3z"></path></svg></div>
                             <div>
                                 <h4 class="text-2xl font-semibold text-white">YouTube Pre-Roll ($175/mo)</h4>
-                                <p class="text-lg text-gray-300">Build brand authority with franchisee success stories and origin story videos. (Est. CPL: $45-$90)</p>
+                                <p class="text-base text-gray-300">Build brand authority with franchisee success stories and origin story videos. (Est. CPL: $45-$90)</p>
                             </div>
                         </div>
                     </div>
@@ -351,6 +358,7 @@
             <!-- Slide 8: Phase 3: Scale & Diversification -->
             <div class="slide">
                 <h1 class="slide-title">Phase 3: Scale & Diversification <span class="text-2xl text-gray-400 font-light">($5,000/mo)</span></h1>
+                <!-- UPDATED: Reduced padding and text size -->
                 <div class="slide-content grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <!-- Chart -->
                     <div class="flex flex-col items-center bg-gray-700 p-6 rounded-xl">
@@ -374,14 +382,15 @@
                         </div>
                     </div>
                     <!-- Key Actions -->
-                    <div class="space-y-6">
+                    <!-- UPDATED: Reduced space-y-6 to space-y-4 and text-lg to text-base -->
+                    <div class="space-y-4">
                         <h3 class="text-3xl font-semibold text-white mb-4">New Strategic Focus</h3>
                         <div class="flex items-start gap-4">
                             <div class="icon-box bg-emerald-500"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" x2="10" y1="2" y2="22"></line><line x1="14" x2="14" y1="2" y2="22"></line><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"></path><path d="M9 12h6"></path></svg></div>
                             <div>
                                 <h4 class="text-2xl font-semibold text-white">SEO & Content Support</h4>
-                                <p class="text-lg text-gray-300">Build long-term, low-CPL assets. Focus on FDD info hubs, state-specific opportunity pages, and competitor comparisons.</p>
-                                <p class="text-lg text-gray-300 mt-2"><strong class="text-white">Goal:</strong> 3-8 organic leads/month by Month 12.</p>
+                                <p class="text-base text-gray-300">Build long-term, low-CPL assets. Focus on FDD info hubs, state-specific opportunity pages, and competitor comparisons.</p>
+                                <p class="text-base text-gray-300 mt-2"><strong class="text-white">Goal:</strong> 3-8 organic leads/month by Month 12.</p>
                             </div>
                         </div>
                     </div>
@@ -469,17 +478,20 @@
                 <div class="slide-content flex justify-center items-center">
                     <div class="w-full max-w-2xl">
                         <!-- TOFU -->
-                        <div class="funnel-segment bg-blue-600" style="width: 100%; height: 120px; clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);">
+                        <!-- UPDATED: Changed clip-path -->
+                        <div class="funnel-segment bg-blue-600" style="width: 100%; height: 120px; clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);">
                             <span class="text-2xl font-bold">Top of Funnel (25%) - $1,250</span>
                             <span class="text-lg">Goal: Brand Awareness (Meta Cold, YouTube)</span>
                         </div>
                         <!-- MOFU -->
-                        <div class="funnel-segment bg-blue-500" style="width: 80%; height: 120px; clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%); margin-left: 10%;">
+                        <!-- UPDATED: Changed clip-path -->
+                        <div class="funnel-segment bg-blue-500" style="width: 80%; height: 120px; clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%); margin-left: 10%;">
                             <span class="text-2xl font-bold">Middle of Funnel (40%) - $2,000</span>
                             <span class="text-lg">Goal: Lead Generation (Generic Google, LinkedIn)</span>
                         </div>
                         <!-- BOFU -->
-                        <div class="funnel-segment bg-blue-400" style="width: 60%; height: 120px; clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%); margin-left: 20%;">
+                        <!-- UPDATED: Changed clip-path -->
+                        <div class="funnel-segment bg-blue-400" style="width: 60%; height: 120px; clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%); margin-left: 20%;">
                             <span class="text-2xl font-bold">Bottom of Funnel (35%) - $1,750</span>
                             <span class="text-lg">Goal: Lead Conversion (Brand Google, Retargeting)</span>
                         </div>
@@ -519,30 +531,31 @@
             <!-- Slide 13: KPI Dashboard -->
             <div class="slide">
                 <h1 class="slide-title">KPI Dashboard & Targets</h1>
+                <!-- UPDATED: Reduced padding and text sizes -->
                 <div class="slide-content pt-4">
                     <h3 class="text-2xl font-semibold text-white mb-4">Primary Metrics (by Phase)</h3>
-                    <table class="w-full text-left rounded-lg overflow-hidden shadow-lg mb-8">
-                        <thead class="bg-gray-700 text-lg text-white">
+                    <table class="w-full text-left rounded-lg overflow-hidden shadow-lg mb-6">
+                        <thead class="bg-gray-700 text-base text-white">
                             <tr>
-                                <th class="p-4">Metric</th>
-                                <th class="p-4">Phase 1 Target</th>
-                                <th class="p-4">Phase 2 Target</th>
-                                <th class="p-4">Phase 3 Target</th>
+                                <th class="p-3">Metric</th>
+                                <th class="p-3">Phase 1 Target</th>
+                                <th class="p-3">Phase 2 Target</th>
+                                <th class="p-3">Phase 3 Target</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-700 bg-gray-600 text-gray-200 text-lg">
-                            <tr><td class="p-4 font-bold">Cost Per Lead (CPL)</td><td class="p-4">$120 - $180</td><td class="p-4">$85 - $130</td><td class="p-4">$75 - $110</td></tr>
-                            <tr><td class="p-4 font-bold">Lead Volume</td><td class="p-4">15-30 / mo</td><td class="p-4">30-50 / mo</td><td class="p-4">50-80 / mo</td></tr>
-                            <tr><td class="p-4 font-bold">Lead Quality Score</td><td class="p-4">40%+ qualified</td><td class="p-4">50%+ qualified</td><td class="p-4">60%+ qualified</td></tr>
-                            <tr><td class="p-4 font-bold">Cost Per Sale (CPS)</td><td class="p-4">N/A</td><td class="p-4">$12k - $18k</td><td class="p-4">$8k - $12k</td></tr>
+                        <tbody class="divide-y divide-gray-700 bg-gray-600 text-gray-200 text-base">
+                            <tr><td class="p-3 font-bold">Cost Per Lead (CPL)</td><td class="p-3">$120 - $180</td><td class="p-3">$85 - $130</td><td class="p-3">$75 - $110</td></tr>
+                            <tr><td class="p-3 font-bold">Lead Volume</td><td class="p-3">15-30 / mo</td><td class="p-3">30-50 / mo</td><td class="p-3">50-80 / mo</td></tr>
+                            <tr><td class="p-3 font-bold">Lead Quality Score</td><td class="p-3">40%+ qualified</td><td class="p-3">50%+ qualified</td><td class="p-3">60%+ qualified</td></tr>
+                            <tr><td class="p-3 font-bold">Cost Per Sale (CPS)</td><td class="p-3">N/A</td><td class="p-3">$12k - $18k</td><td class="p-3">$8k - $12k</td></tr>
                         </tbody>
                     </table>
                     
                     <h3 class="text-2xl font-semibold text-white mb-4">Secondary Metrics (Tracked Monthly)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-gray-700 p-6 rounded-xl text-center"><span class="block text-3xl font-bold text-blue-300">2-4%</span><span class="text-lg text-white">Click-Through Rate (CTR)</span></div>
-                        <div class="bg-gray-700 p-6 rounded-xl text-center"><span class="block text-3xl font-bold text-blue-300">8-12%</span><span class="text-lg text-white">Landing Page Conv. Rate</span></div>
-                        <div class="bg-gray-700 p-6 rounded-xl text-center"><span class="block text-3xl font-bold text-blue-300">2.5-4%</span><span class="text-lg text-white">Lead-to-Sale Conversion</span></div>
+                        <div class="bg-gray-700 p-4 rounded-xl text-center"><span class="block text-2xl font-bold text-blue-300">2-4%</span><span class="text-base text-white">Click-Through Rate (CTR)</span></div>
+                        <div class="bg-gray-700 p-4 rounded-xl text-center"><span class="block text-2xl font-bold text-blue-300">8-12%</span><span class="text-base text-white">Landing Page Conv. Rate</span></div>
+                        <div class="bg-gray-700 p-4 rounded-xl text-center"><span class="block text-2xl font-bold text-blue-300">2.5-4%</span><span class="text-base text-white">Lead-to-Sale Conversion</span></div>
                     </div>
                 </div>
             </div>
