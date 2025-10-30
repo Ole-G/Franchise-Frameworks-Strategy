@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Analytics Platform Comparison</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple icon styling for the table */
+        .icon-cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+        }
+        .icon-cell svg {
+            flex-shrink: 0;
+        }
+        .icon-cell p {
+            margin-top: 0.5rem;
+        }
+        /* Mobile table layout */
+        @media (max-width: 767px) {
+            .comparison-table .table-header {
+                display: none;
+            }
+            .comparison-table .table-row {
+                display: block;
+                border-bottom: 2px solid #e5e7eb;
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+            }
+            .comparison-table .table-cell {
+                display: block;
+                width: 100%;
+                padding: 0.75rem 0.25rem;
+            }
+            .comparison-table .criteria-cell {
+                background-color: #f9fafb;
+                padding: 0.75rem;
+                border-radius: 8px;
+            }
+            /* Add labels for mobile view */
+            .comparison-table .table-cell[data-label]::before {
+                content: attr(data-label);
+                display: block;
+                font-weight: 700;
+                font-size: 1.125rem;
+                margin-bottom: 0.5rem;
+                color: #111827;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+    <!-- Icons definitions -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+        <symbol id="icon-check" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="icon-warn" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM10 13a1 1 0 110-2 1 1 0 010 2zm-1-8a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="icon-cross" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+        </symbol>
+    </svg>
+
+    <div class="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Conversion Funnel & Analytics Platform
+            </h1>
+            <p class="mt-4 text-xl text-gray-600">
+                Franchiser Recommendation: Hyros vs. TripleWhale vs. PostHog
+            </p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-table w-full overflow-hidden rounded-lg bg-white shadow-lg">
+            <div class="hidden md:table w-full">
+                <!-- Desktop Header -->
+                <div class="table-header-group bg-gray-100">
+                    <div class="table-row">
+                        <div class="table-cell p-4 text-left text-sm font-semibold uppercase tracking-wider text-gray-600 w-1/4">Evaluation Criteria</div>
+                        <div class="table-cell p-4 text-center text-sm font-semibold uppercase tracking-wider text-gray-600 w-1/4">Hyros</div>
+                        <div class="table-cell p-4 text-center text-sm font-semibold uppercase tracking-wider text-gray-600 w-1/4">TripleWhale</div>
+                        <div class="table-cell p-4 text-center text-sm font-semibold uppercase tracking-wider text-gray-600 w-1/4">PostHog</div>
+                    </div>
+                </div>
+
+                <!-- Table Body -->
+                <div class="table-row-group divide-y divide-gray-200">
+                    <!-- Row 1: Multi-Touch Attribution -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Multi-Touch Attribution</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Critical:</strong> Franchise sales cycle = 90-180 days with 15-25 touchpoints</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Advanced algorithm tracking from first click through 90-180 day journey</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Good but e-commerce focused</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Manual setup required</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Long Sales Cycle Tracking -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Long Sales Cycle Tracking</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Essential:</strong> Need to track months-long consideration process</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Designed for extended customer journeys</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-red-500"><use href="#icon-cross"></use></svg>
+                            <p class="text-sm text-gray-700">Optimized for shorter e-commerce cycles</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Can be configured</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Call & Offline Tracking -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Call & Offline Tracking</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Important:</strong> Discovery calls, Discovery Days, in-person meetings are critical touchpoints</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Integrates call tracking, offline events</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-red-500"><use href="#icon-cross"></use></svg>
+                            <p class="text-sm text-gray-700">Limited offline capabilities</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Requires custom implementation</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Integration Flexibility -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Integration Flexibility</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Essential:</strong> Must connect Google Ads, Meta, LinkedIn, CRM, email platforms</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Connects to ad platforms, CRMs, custom systems</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">30+ integrations but e-commerce focused</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">100+ integrations via API</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 5: Revenue Attribution -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Revenue Attribution</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Critical:</strong> Need to attribute $40K-$50K franchise fee to marketing source</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Tracks actual revenue to specific ads/touchpoints</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Strong for e-commerce revenue</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Requires custom event setup</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 6: Real-Time Optimization -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Real-Time Optimization</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Important:</strong> Fast iteration on underperforming campaigns</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Real-time data with AI-powered recommendations</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Real-time dashboards</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Real-time event tracking</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 7: Lead Scoring Integration -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Lead Scoring Integration</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Critical:</strong> Must integrate with lead scoring model</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Can feed data to CRM for scoring</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Basic scoring capabilities</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Excellent event-based scoring</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 8: Pricing -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Pricing</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Consideration:</strong> Budget vs. ROI on $8K-12K cost-per-sale</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Starts ~$500-$1000/mo, scales with revenue</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Starts $1,290/yr, increases with GMV</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Free tier, paid starts $450/mo for 1M events</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 9: Learning Curve -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">Learning Curve</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Consideration:</strong> Team technical capability</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Complex onboarding, requires training</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">User-friendly interface</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-yellow-500"><use href="#icon-warn"></use></svg>
+                            <p class="text-sm text-gray-700">Technical setup required</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 10: E-commerce vs. Lead Gen Focus -->
+                    <div class="table-row">
+                        <div class="table-cell p-4 align-top criteria-cell">
+                            <div class="font-semibold text-gray-900">E-commerce vs. Lead Gen Focus</div>
+                            <div class="mt-1 text-xs text-gray-500"><strong>Decisive:</strong> Franchise = lead gen, not e-commerce</div>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="Hyros">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Built for lead generation and service businesses</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="TripleWhale">
+                            <svg class="w-7 h-7 text-red-500"><use href="#icon-cross"></use></svg>
+                            <p class="text-sm text-gray-700">Explicitly e-commerce/Shopify focused</p>
+                        </div>
+                        <div class="table-cell p-4 align-top icon-cell" data-label="PostHog">
+                            <svg class="w-7 h-7 text-green-500"><use href="#icon-check"></use></svg>
+                            <p class="text-sm text-gray-700">Flexible for any business model</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recommendation Section -->
+        <div class="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="p-6 sm:p-8">
+                <h2 class="text-2xl font-bold text-gray-900">Recommendation for Franchisers</h2>
+                <p class="mt-3 text-base text-gray-600">
+                    Based on the critical needs of a franchise business model—specifically long sales cycles, multi-touch attribution, and offline event tracking—one platform stands out.
+                </p>
+                
+                <div class="mt-6 p-5 bg-green-50 rounded-lg border border-green-200">
+                    <h3 class="text-xl font-semibold text-green-800">Winner: Hyros</h3>
+                    <p class="mt-2 text-green-700">
+                        Hyros is the clear choice for a franchiser. Its entire model is built to solve the exact problems franchisers face.
+                    </p>
+                </div>
+
+                <h4 class="mt-6 text-lg font-semibold text-gray-800">Key Decisive Factors:</h4>
+                <ul role="list" class="mt-4 space-y-3">
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="ml-3 text-base text-gray-700"><strong>Lead Gen Focus:</strong> Unlike TripleWhale, Hyros is explicitly built for lead generation and service businesses, which perfectly aligns with the franchise model.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="ml-3 text-base text-gray-700"><strong>Long Sales Cycle & Offline Tracking:</strong> It is designed to track 90-180 day journeys and integrate critical offline touchpoints like calls and discovery days, which are blind spots for e-commerce-focused platforms.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="ml-3 text-base text-gray-700"><strong>Out-of-the-Box Suitability:</strong> While PostHog is flexible, it requires significant custom setup. Hyros is built to handle these specific attribution challenges from day one, justifying its higher price point.</span>
+                    </li>
+                </ul>
+                
+                <h4 class="mt-6 text-lg font-semibold text-gray-800">Final Verdict</h4>
+                <p class="mt-2 text-base text-gray-600">
+                    For franchisers needing to accurately attribute a $40K-$50K franchise fee to a specific marketing source over a 6-month journey, **Hyros** provides the most robust and specialized solution, despite its higher learning curve and cost.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
